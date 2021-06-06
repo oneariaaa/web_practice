@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate')%>
+<body>
+  <ol class="list-group list-group-numbered">
+    <% for (let nsn of NSN){%>
+    <li class="list-group-item" style="margin: 2px">
+      <a href="/nsn/<%= nsn.FSC %>-<%= nsn.COUNTRY_CODE %>-<%= nsn.NIIN %>">
+        <h5><%= nsn.NAME %></h5>
+        <% if (nsn.COUNTRY_CODE == 1){ %>
+        <span>NSN: <%= nsn.FSC %>-01-<%= nsn.NIIN %> </span>
+        <% }else{ %>
+        <span>NSN: <%= nsn.FSC %>-00-<%= nsn.NIIN %> </span>
+        <% } %>
+      </a>
+    </li>
+    <% } %>
+  </ol>
+</body>

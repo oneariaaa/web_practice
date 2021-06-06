@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate')%>
+
+<body>
+  <div>
+    <a
+      href="/nsn/<%= nsn[0].FSC %>-<%= nsn[0].COUNTRY_CODE %>-<%= nsn[0].NIIN %>"
+    >
+      <h5>Detials of NSN:</h5>
+      <h5>Name: <%= nsn[0].NAME %></h5>
+      <h5>INC: <%= nsn[0].INC %></h5>
+      <h5>FSC: <%= nsn[0].FSC %></h5>
+      <h5>FSG: <%= nsn[0].FSG %></h5>
+      <h5>COUNTRY_CODE: <%= nsn[0].COUNTRY_CODE %></h5>
+      <h5>PUBLICATION DATE: <%= nsn[0].PUBLICATION_DATE %></h5>
+    </a>
+  </div>
+</body>
